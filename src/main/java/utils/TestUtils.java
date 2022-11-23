@@ -16,21 +16,21 @@ public class TestUtils {
         switch (browserName) {
             case "firefox" -> {
                 if (!isMac()) {
-                    File file = new File("src/main/resources/geckodriver");
+                    File file = new File("src/main/resources/geckodriver.exe");
                     System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
                 }
                 driver = new FirefoxDriver();
             }
             case "chrome" -> {
                 if (!isMac()) {
-                    File file = new File("src/main/resources/chromedriver");
+                    File file = new File("src/main/resources/chromedriver.exe");
                     System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
                 }
                 driver = new ChromeDriver();
             }
             case "msedge" -> {
                 if (!isMac()) {
-                    File file = new File("src/main/resources/msedgedriver");
+                    File file = new File("src/main/resources/msedgedriver.exe");
                     System.setProperty("webdriver.msedge.driver", file.getAbsolutePath());
                 }
                 driver = new EdgeDriver();
